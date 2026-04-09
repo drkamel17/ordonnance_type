@@ -1,10 +1,14 @@
 {
   "env": {
     "JSONBIN_API_KEY": "$2a$10$Ptyh0oty3KR8LV.uHssl7.3W0h9v5YzY/oxjQrTDuzN2rQ1TIOtg2",
-    "JSONBIN_BIN_ID": "69d7eb68856a68218917382a"
+    "JSONBIN_BIN_ID": "69d7eb68856a68218917382a",
+    "GITHUB_TOKEN": "",
+    "GITHUB_OWNER": "",
+    "GITHUB_REPO": ""
   },
   "rewrites": [
     { "source": "/api/config.js", "destination": "/api/config.js" },
+    { "source": "/api/save-github", "destination": "/api/save-github.js" },
     { "source": "/ordonnances-types.json", "destination": "/ordonnances-types.json" }
   ],
   "headers": [

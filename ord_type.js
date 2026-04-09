@@ -1,9 +1,17 @@
 // Gestion des ordonnances types - ord_type.js
 
-// === Configuration JSONBin.io (depuis variables d'environnement) ===
+// === Configuration ===
 let jsonBinConfig = {
     binId: '69d7eb68856a68218917382a',
     apiKey: ''
+};
+
+// Configuration GitHub (optionnel - pour ecrire directement sur GitHub)
+const GITHUB_CONFIG = {
+    owner: '',  // Votre nom d'utilisateur GitHub
+    repo: '',   // Nom du depot
+    path: 'ordonnances-types.json',
+    branch: 'main'
 };
 
 // Charger la config depuis le serveur
@@ -11,7 +19,6 @@ async function loadConfig() {
     try {
         const response = await fetch('/api/config.js');
         const script = await response.text();
-        // Extraire les valeurs du script
         const match = script.match(/window\.ENV\s*=\s*(\{[^}]+\})/);
         if (match) {
             const env = JSON.parse(match[1]);
@@ -19,9 +26,15 @@ async function loadConfig() {
                 binId: env.JSONBIN_BIN_ID || jsonBinConfig.binId,
                 apiKey: env.JSONBIN_API_KEY || ''
             };
+            // Charger aussi la config GitHub
+            if (env.GITHUB_TOKEN && env.GITHUB_OWNER && env.GITHUB_REPO) {
+                GITHUB_CONFIG.token = env.GITHUB_TOKEN;
+                GITHUB_CONFIG.owner = env.GITHUB_OWNER;
+                GITHUB_CONFIG.repo = env.GITHUB_REPO;
+            }
         }
     } catch (err) {
-        console.log('Config non chargee depuis le serveur:', err);
+        console.log('Config non chargee:', err);
     }
 }
 
@@ -94,6 +107,7 @@ function initialiserEvenements() {
     document.getElementById('btn-importer').addEventListener('click', () => document.getElementById('input-import').click());
     document.getElementById('btn-fermer').addEventListener('click', () => window.close());
     document.getElementById('btn-actualiser').addEventListener('click', actualiserDepuisJSONBin);
+    document.getElementById('btn-telecharger').addEventListener('click', telechargerFichierJSON);
     
     // Import
     document.getElementById('input-import').addEventListener('change', importerOrdonnances);
@@ -104,7 +118,18 @@ function initialiserEvenements() {
 
 // === Chargement des données ===
 async function chargerOrdonnancesTypesDepuisFichier() {
-    // Essayer d'abord le fichier local
+    // Essayer d'abord JSONBin.io (source principale)
+    try {
+        const jsonBinData = await chargerDepuisJSONBin();
+        if (jsonBinData && Object.keys(jsonBinData).length > 0) {
+            console.log('✅ Charge depuis JSONBin.io:', Object.keys(jsonBinData).length, 'ordonnances');
+            return jsonBinData;
+        }
+    } catch (e) {
+        console.log('JSONBin.io non accessible');
+    }
+    
+    // Fallback: fichier local
     try {
         const response = await fetch('./ordonnances-types.json');
         if (response.ok) {
@@ -118,9 +143,7 @@ async function chargerOrdonnancesTypesDepuisFichier() {
         console.log('Fichier local non accessible');
     }
     
-    // Fallback: JSONBin.io
-    console.log('→ Chargement depuis JSONBin.io...');
-    return chargerDepuisJSONBin();
+    return {};
 }
 
 // === Chargement depuis JSONBin.io (pour le bouton actualiser) ===
@@ -459,17 +482,39 @@ async function importerOrdonnances(event) {
                 return;
             }
             
+            // Demander confirmation pour remplacer ou fusionner
+            const action = confirm('Voulez-vous REMPLACER toutes les donnees existantes ?\n\nOK = Remplacer tout\nAnnuler = Fusionner avec les donnees existantes');
+            
+            if (action) {
+                data = imported; // Remplacer
+            } else {
+                data = { ...data, ...imported }; // Fusionner
+            }
+            
             // Fusionner
             const nbAjoutes = Object.keys(imported).length;
-            data = { ...data, ...imported };
             
             // Sauvegarder vers JSONBin.io
             await sauvegarderVersFichier(data);
             
+            // TELECHARGER le fichier JSON pour remplacer le local
+            const dataStr = JSON.stringify(data, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'ordonnances-types.json';
+            link.click();
+            URL.revokeObjectURL(url);
+            
             afficherOrdonnances(data);
             mettreAJourStats();
             
-            afficherMessage(`${nbAjoutes} ordonnance(s) importée(s).`, 'success');
+            if (action) {
+                afficherMessage(`${nbAjoutes} ordonnance(s) importee(s) - Fichier telecharge !`, 'success');
+            } else {
+                afficherMessage(`${nbAjoutes} nouvelle(s) ordonnance(s) ajoutee(s) - Fusion !`, 'success');
+            }
             event.target.value = '';
         } catch (error) {
             afficherMessage('Erreur lors de l\'import : ' + error.message, 'error');
@@ -522,30 +567,54 @@ async function sauvegarderVersFichier(data) {
     // Sauvegarder dans localStorage (pour compatibilité)
     localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
     
-    if (!config.apiKey) {
-        showSyncIndicator('💾 Sauvegarde locale effectuee (API Key non configuree).');
-        return;
+    // Sauvegarder sur JSONBin.io
+    if (config.apiKey) {
+        try {
+            await fetch(`https://api.jsonbin.io/v3/b/${config.binId}`, {
+                method: 'PUT',
+                headers: {
+                    'X-Master-Key': config.apiKey,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+        } catch (e) {
+            console.log('JSONBin.io save failed:', e);
+        }
     }
     
-    try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}`, {
-            method: 'PUT',
-            headers: {
-                'X-Master-Key': config.apiKey,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        
-        if (response.ok) {
-            showSyncIndicator('✅ Sauvegarde sur JSONBin.io reussie !');
-            afficherMessage('Ordonnance sauvegardee sur le cloud !', 'success');
-        } else {
-            throw new Error('Erreur HTTP: ' + response.status);
+    // Sauvegarder sur GitHub (si configure)
+    if (GITHUB_CONFIG.token && GITHUB_CONFIG.owner && GITHUB_CONFIG.repo) {
+        try {
+            const response = await fetch('/api/save-github', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    data: data,
+                    message: 'Update ordonnances-types.json'
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showSyncIndicator('✅ Sauvegarde sur GitHub reussie !');
+                afficherMessage('Fichier mis a jour sur GitHub !', 'success');
+                return;
+            } else {
+                console.log('GitHub save failed:', result.message);
+            }
+        } catch (e) {
+            console.log('GitHub save error:', e);
         }
-    } catch (error) {
-        console.error('Erreur sauvegarde JSONBin.io:', error);
-        showSyncIndicator('❌ Erreur sauvegarde cloud.<br>Sauvegarde locale uniquement.');
+    }
+    
+    // Fallback: telechargement
+    if (config.apiKey) {
+        showSyncIndicator('✅ Sauvegarde JSONBin.io reussie !');
+        afficherMessage('Ordonnance sauvegardee sur le cloud !', 'success');
+    } else {
+        showSyncIndicator('💾 Sauvegarde locale effectuee.');
     }
 }
 
@@ -559,6 +628,7 @@ async function actualiserDepuisJSONBin() {
             localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
             afficherOrdonnances(data);
             mettreAJourStats();
+            
             showSyncIndicator('✅ Donnees actualisees depuis JSONBin.io !');
             afficherMessage('Donnees actualisees depuis le cloud !', 'success');
         } else {
@@ -568,4 +638,19 @@ async function actualiserDepuisJSONBin() {
         console.error('Erreur actualisation:', error);
         showSyncIndicator('❌ Erreur lors de l\'actualisation.');
     }
+}
+
+// === Telecharger fichier JSON ===
+function telechargerFichierJSON() {
+    const dataStr = JSON.stringify(data, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'ordonnances-types.json';
+    link.click();
+    URL.revokeObjectURL(url);
+    
+    showSyncIndicator('📥 Fichier ordonnances-types.json telecharge !');
+    afficherMessage('Fichier JSON telecharge !', 'success');
 }
