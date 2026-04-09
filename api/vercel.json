@@ -1,9 +1,0 @@
-{
-  "env": {
-    "JSONBIN_API_KEY": "$2a$10$Ptyh0oty3KR8LV.uHssl7.3W0h9v5YzY/oxjQrTDuzN2rQ1TIOtg2",
-    "JSONBIN_BIN_ID": "69d7eb68856a68218917382a"
-  },
-  "rewrites": [
-    { "source": "/api/config.js", "destination": "/api/config.js" }
-  ]
-}

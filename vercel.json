@@ -9,7 +9,6 @@
   "rewrites": [
     { "source": "/api/config.js", "destination": "/api/config.js" },
     { "source": "/api/save-github", "destination": "/api/save-github.js" },
-    { "source": "/api/test", "destination": "/api/test.js" },
     { "source": "/ordonnances-types.json", "destination": "/ordonnances-types.json" }
   ],
   "headers": [
