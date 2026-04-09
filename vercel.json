@@ -7,8 +7,7 @@
     "GITHUB_REPO": "ordonnance_type"
   },
   "rewrites": [
-    { "source": "/api/config.js", "destination": "/api/config.js" },
-    { "source": "/api/save-github", "destination": "/api/save-github.js" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/ordonnances-types.json", "destination": "/ordonnances-types.json" }
   ],
   "headers": [
