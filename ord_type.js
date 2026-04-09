@@ -23,6 +23,8 @@ async function loadConfig() {
         const match = script.match(/window\.ENV\s*=\s*(\{[^}]+\})/);
         if (match) {
             const env = JSON.parse(match[1]);
+            console.log('Config chargee:', env);
+            
             jsonBinConfig = {
                 binId: env.JSONBIN_BIN_ID || jsonBinConfig.binId,
                 apiKey: env.JSONBIN_API_KEY || ''
@@ -32,6 +34,9 @@ async function loadConfig() {
                 GITHUB_CONFIG.token = env.GITHUB_TOKEN;
                 GITHUB_CONFIG.owner = env.GITHUB_OWNER;
                 GITHUB_CONFIG.repo = env.GITHUB_REPO;
+                console.log('GitHub config:', GITHUB_CONFIG);
+            } else {
+                console.log('GitHub config NON configuree');
             }
         }
     } catch (err) {
@@ -586,17 +591,19 @@ async function sauvegarderVersFichier(data) {
     
     // Sauvegarder sur GitHub (si configure)
     if (GITHUB_CONFIG.token && GITHUB_CONFIG.owner && GITHUB_CONFIG.repo) {
+        console.log('Sauvegarde GitHub:', GITHUB_CONFIG);
         try {
             const response = await fetch('/api/save-github', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     data: data,
-                    message: 'Update ordonnances-types.json'
+                    message: 'Update ordonnances-types.json via app'
                 })
             });
             
             const result = await response.json();
+            console.log('GitHub response:', result);
             
             if (result.success) {
                 showSyncIndicator('✅ Sauvegarde sur GitHub reussie !');
@@ -608,6 +615,8 @@ async function sauvegarderVersFichier(data) {
         } catch (e) {
             console.log('GitHub save error:', e);
         }
+    } else {
+        console.log('GitHub non configure - token:', GITHUB_CONFIG.token ? 'OK' : 'MANQUE');
     }
     
     // Fallback: telechargement
