@@ -93,6 +93,7 @@ function initialiserEvenements() {
     document.getElementById('btn-exporter').addEventListener('click', exporterOrdonnances);
     document.getElementById('btn-importer').addEventListener('click', () => document.getElementById('input-import').click());
     document.getElementById('btn-fermer').addEventListener('click', () => window.close());
+    document.getElementById('btn-actualiser').addEventListener('click', actualiserDepuisJSONBin);
     
     // Import
     document.getElementById('input-import').addEventListener('change', importerOrdonnances);
@@ -101,14 +102,50 @@ function initialiserEvenements() {
     document.getElementById('search-ordonnances').addEventListener('input', filtrerOrdonnances);
 }
 
-// === Chargement des données depuis JSONBin.io ===
+// === Chargement des données ===
 async function chargerOrdonnancesTypesDepuisFichier() {
+    try {
+        // Charger depuis le fichier local
+        const response = await fetch('ordonnances-types.json?t=' + Date.now());
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        }
+        throw new Error('Fichier non trouvé');
+    } catch (error) {
+        console.log('Chargement depuis fichier local echoue, tentative JSONBin.io:', error);
+        // Fallback vers JSONBin.io si le fichier local n'existe pas
+        return chargerDepuisJSONBin();
+    }
+}
+
+// === Chargement depuis JSONBin.io (pour le bouton actualiser) ===
+async function chargerDepuisJSONBin() {
     const config = getJSONBinConfig();
     
     if (!config.apiKey) {
-        console.log('API Key non configurée, chargement depuis localStorage');
+        console.log('API Key non configuree');
         return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
     }
+    
+    try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}/latest`, {
+            headers: {
+                'X-Master-Key': config.apiKey
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error('Erreur HTTP: ' + response.status);
+        }
+        
+        const result = await response.json();
+        return result.record || {};
+    } catch (error) {
+        console.error('Erreur chargement JSONBin.io:', error);
+        return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
+    }
+}
     
     try {
         const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}/latest`, {
@@ -524,5 +561,26 @@ async function sauvegarderVersFichier(data) {
     } catch (error) {
         console.error('Erreur sauvegarde JSONBin.io:', error);
         showSyncIndicator('❌ Erreur sauvegarde cloud.<br>Sauvegarde locale uniquement.');
+    }
+}
+
+// === Actualiser depuis JSONBin.io ===
+async function actualiserDepuisJSONBin() {
+    try {
+        const nouvelleData = await chargerDepuisJSONBin();
+        
+        if (Object.keys(nouvelleData).length > 0) {
+            data = nouvelleData;
+            localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
+            afficherOrdonnances(data);
+            mettreAJourStats();
+            showSyncIndicator('✅ Donnees actualisees depuis JSONBin.io !');
+            afficherMessage('Donnees actualisees depuis le cloud !', 'success');
+        } else {
+            showSyncIndicator('⚠️Aucune donnee sur JSONBin.io.');
+        }
+    } catch (error) {
+        console.error('Erreur actualisation:', error);
+        showSyncIndicator('❌ Erreur lors de l\'actualisation.');
     }
 }
