@@ -4,6 +4,15 @@
     "JSONBIN_BIN_ID": "69d7eb68856a68218917382a"
   },
   "rewrites": [
-    { "source": "/api/config.js", "destination": "/api/config.js" }
+    { "source": "/api/config.js", "destination": "/api/config.js" },
+    { "source": "/ordonnances-types.json", "destination": "/ordonnances-types.json" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
   ]
 }

@@ -104,19 +104,23 @@ function initialiserEvenements() {
 
 // === Chargement des données ===
 async function chargerOrdonnancesTypesDepuisFichier() {
+    // Essayer d'abord le fichier local
     try {
-        // Charger depuis le fichier local
-        const response = await fetch('ordonnances-types.json?t=' + Date.now());
+        const response = await fetch('./ordonnances-types.json');
         if (response.ok) {
             const data = await response.json();
-            return data;
+            if (data && Object.keys(data).length > 0) {
+                console.log('✅ Charge depuis fichier local:', Object.keys(data).length, 'ordonnances');
+                return data;
+            }
         }
-        throw new Error('Fichier non trouvé');
-    } catch (error) {
-        console.log('Chargement depuis fichier local echoue, tentative JSONBin.io:', error);
-        // Fallback vers JSONBin.io si le fichier local n'existe pas
-        return chargerDepuisJSONBin();
+    } catch (e) {
+        console.log('Fichier local non accessible');
     }
+    
+    // Fallback: JSONBin.io
+    console.log('→ Chargement depuis JSONBin.io...');
+    return chargerDepuisJSONBin();
 }
 
 // === Chargement depuis JSONBin.io (pour le bouton actualiser) ===
@@ -127,25 +131,6 @@ async function chargerDepuisJSONBin() {
         console.log('API Key non configuree');
         return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
     }
-    
-    try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}/latest`, {
-            headers: {
-                'X-Master-Key': config.apiKey
-            }
-        });
-        
-        if (!response.ok) {
-            throw new Error('Erreur HTTP: ' + response.status);
-        }
-        
-        const result = await response.json();
-        return result.record || {};
-    } catch (error) {
-        console.error('Erreur chargement JSONBin.io:', error);
-        return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
-    }
-}
     
     try {
         const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}/latest`, {
