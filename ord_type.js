@@ -7,9 +7,10 @@ let jsonBinConfig = {
 };
 
 // Configuration GitHub (optionnel - pour ecrire directement sur GitHub)
-const GITHUB_CONFIG = {
-    owner: '',  // Votre nom d'utilisateur GitHub
-    repo: '',   // Nom du depot
+let GITHUB_CONFIG = {
+    token: '',
+    owner: '',  
+    repo: '',   
     path: 'ordonnances-types.json',
     branch: 'main'
 };
