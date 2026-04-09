@@ -6,6 +6,1693 @@
       "quantite": "10 jours"
     },
     {
+      "medicament": "PARAMOL - COMP. SEC. - 1G",
+      "posologie": "01 cp 3*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "abces dent A2": [
+    {
+      "medicament": "ROVADAL - COMP. - 1 500 000UI",
+      "posologie": "01 cp 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "PARAMOL - COMP. SEC. - 1G",
+      "posologie": "01 cp 3*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "FLAGYL - COMP. PELLI. - 250MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "abces dent enf": [
+    {
+      "medicament": "ROVADAL - SIROP - 0,375MUI/5ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose 3*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "FLAGYL - SUSP.BUV. - 125MG/5ML",
+      "posologie": "01 cam 3*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "acne": [
+    {
+      "medicament": "HEXOMEDINE - SOL.DERM. - 0,15%",
+      "posologie": "01 ap sur le face",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "ACNESTOP - GEL - 0,01",
+      "posologie": "01 ap sur 02 j",
+      "quantite": "02 tubes"
+    },
+    {
+      "medicament": "CUTACNYL - GEL.DERM. - 0,05",
+      "posologie": "01 ap le soir 01 sur 02 jour",
+      "quantite": "02 tubes"
+    },
+    {
+      "medicament": "TIRLOR - COMP - 10MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    }
+  ],
+  "angine": [
+    {
+      "medicament": "AUGMENTIN ADULTES - COMP. PELLI. - 500MG/62,5MG",
+      "posologie": "01 schet 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "SAPRAMOL - PDRE. SOL. BUV. EN SACHETS - 500MG",
+      "posologie": "01 schet 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "MAXILASE - SIROP ENF. ET AD. - 20 000 U CEIP/100ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine ad + toux": [
+    {
+      "medicament": "AUGMENTIN ADULTES - 1g/125mg schet ou cp",
+      "posologie": "02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "SAPRAMOL - PDRE. SOL. BUV. EN SACHETS - 500MG",
+      "posologie": "03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SOLUPRED ORO - COMP. ORODISPERS. - 20MG",
+      "posologie": "02 cp*/j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TOPLEX - SIROP - 1MG/ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine enf (2)": [
+    {
+      "medicament": "AUGMENTIN ENFANT ET AUGMENTIN NOURRISSON - PDRE. P. SUSP. BUV. - 100MG/12,5MG/ML",
+      "posologie": "01 dose 02 f /j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose 03*/jour",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "ANTALFEN - SUSP. BUV. - 20MG/ML (100MG/5ML)",
+      "posologie": "01 dose 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine enf 14": [
+    {
+      "medicament": "AUGMENTIN - COMP. - 500MG ou sachet 500",
+      "posologie": "01 sachet 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "SAPRAMOL - PDRE. SOL. BUV. EN SACHETS - 500MG",
+      "posologie": "03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "XYDOL 200 - COMP. PELLI. - 200MG",
+      "posologie": "02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SOLUPRED ORO - COMP. ORODISPERS. - 20MG",
+      "posologie": "01 cp*/j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TOPLEX - SIROP - 1MG/ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine enf": [
+    {
+      "medicament": "AUGMENTIN ENFANTS - PDRE. P. SUSP. BUV. EN SACHET DOSE - 500MG/62,5MG",
+      "posologie": "01 dose 02 f /j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose 03*/jour",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "ANTALFEN - SUSP. BUV. - 20MG/ML (100MG/5ML)",
+      "posologie": "01 dose 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "TIFEN - SIROP - 1MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine nrs": [
+    {
+      "medicament": "CLAMOXYL - PDRE. P. SUSP.BUV. - 125MG/5ML",
+      "posologie": "01 cam 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "angine simple": [
+    {
+      "medicament": "AUGMENTIN ADULTE PDRE P. SUSP. BUV. EN SACHET-DOSE 1G/125MG/SACHET B/12",
+      "posologie": "01 schet 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "MAXILASE SIROP ENF. ET AD. 20 000 U CEIP/100ML FL/125ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "HEXASPRAY COLLU. 0,75MG/30G FL. PRESSURISE DE 30G",
+      "posologie": "01 pul 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "asthenie1": [
+    {
+      "medicament": "SARGENOR - SOL. BUV. AMP. - 1G/5ML",
+      "posologie": "01 amp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "VITAMINE C - COMP.EFFER. - 500MG",
+      "posologie": "01 cp /j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SUPRADYNE MAG cp",
+      "posologie": "01 cp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "VITAMINE D3 B.O.N - SOL.INJ. IM. ET SOL. BUV. - 200 000UI/ML",
+      "posologie": "01 amp per os",
+      "quantite": "01 boite"
+    }
+  ],
+  "Asthme1": [
+    {
+      "medicament": "VENTOLINE AERO. 100�G/DOSE FL/200DOSES",
+      "posologie": "02 pulv 03*/j",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "CLENIL 250 AERO. 250�G/BOUFFEE FL/200DOSES",
+      "posologie": "01 pilv 03*/j",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "TOTINAL COMP. 1MG B/30",
+      "posologie": "01 cp le soir",
+      "quantite": "03 boites"
+    },
+    {
+      "medicament": "SOLUPRED ORO - COMP. ORODISPERS. - 20MG",
+      "posologie": "02 cp /j pd 05 j",
+      "quantite": "05 jours"
+    }
+  ],
+  "Asthme2": [
+    {
+      "medicament": "VENTOLINE AERO. 100�G/DOSE FL/200DOSES",
+      "posologie": "02 pulv 03*/j",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "CLENIL 250 AERO. 250�G/BOUFFEE FL/200DOSES",
+      "posologie": "01 pilv 03*/j",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "TOTINAL COMP. 1MG B/30",
+      "posologie": "01 cp le soir",
+      "quantite": "03 boites"
+    },
+    {
+      "medicament": "zyrtec cp",
+      "posologie": "01 cp /j",
+      "quantite": "03 boites"
+    }
+  ],
+  "bronchiolite nrs": [
+    {
+      "medicament": "ZOMAX - PDRE. P. SUSP. BUV. - 40MG/ML** (200MG/5ML ET 300MG/7,5ML)**",
+      "posologie": "01 dose/j",
+      "quantite": "03 jours"
+    },
+    {
+      "medicament": "HEET - SOL. BUV. GTTES. - 0,5MG/ML (0,05%)",
+      "posologie": "50 gtte",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "HISTAGAN - SIROP - 0,5MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "DOLIPRANE - SUPPO - 150MG",
+      "posologie": "01 suppo le soir",
+      "quantite": "01 boite"
+    }
+  ],
+  "bronchite AD": [
+    {
+      "medicament": "ZOMAX - COMP. - 500MG",
+      "posologie": "01 cp/j",
+      "quantite": "03 jours"
+    },
+    {
+      "medicament": "SOLUMEDROL 40 MG AMP",
+      "posologie": "01 inj im /J",
+      "quantite": "03 fl"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 180MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "TOPLEX - SIROP - 1MG/ML",
+      "posologie": "01 cas 03 f/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "XYDOL 400 - COMP. PELLI. - 400MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SAPRAMOL - PDRE. SOL. BUV. EN SACHETS - 500MG",
+      "posologie": "01 sachet 03*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "bronchite ad2": [
+    {
+      "medicament": "ZOMAX - COMP. - 500MG",
+      "posologie": "01 cp/j",
+      "quantite": "03 jours"
+    },
+    {
+      "medicament": "SOLUPRED ORO - COMP. ORODISPERS. - 20MG",
+      "posologie": "02 cp/j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "BRONCHOCALM ADULTES - SIROP - 0,2%",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 180MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    }
+  ],
+  "bronchite enf 01": [
+    {
+      "medicament": "ZOMAX - PDRE. P. SUSP. BUV. - 40MG/ML** (200MG/5ML ET 300MG/7,5ML)**",
+      "posologie": "01 dose/j",
+      "quantite": "03 jours"
+    },
+    {
+      "medicament": "HEET - SOL. BUV. GTTES. - 0,5MG/ML (0,05%)",
+      "posologie": "100 gtte",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TIFEN - SIROP - 1MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "TOPLEX - SIROP - 1MG/ML",
+      "posologie": "01 cac 02*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "SALBUTAMOL SAIDAL - SIROP - 2MG/5ML**",
+      "posologie": "01 cac 02*/j",
+      "quantite": "07 jours"
+    }
+  ],
+  "bronchite enf 2": [
+    {
+      "medicament": "ZOMAX - PDRE. P. SUSP. BUV. - 40MG/ML** (200MG/5ML ET 300MG/7,5ML)**",
+      "posologie": "01 dose/j",
+      "quantite": "03 jours"
+    },
+    {
+      "medicament": "HEET - SOL. BUV. GTTES. - 0,5MG/ML (0,05%)",
+      "posologie": "100 gtte",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TIFEN - SIROP - 1MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "SALBUTAMOL SAIDAL - SIROP - 2MG/5ML**",
+      "posologie": "01 cac 02*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "TOUX KID",
+      "posologie": "01 CAC 02*/",
+      "quantite": "01 fl"
+    }
+  ],
+  "brulure 01": [
+    {
+      "medicament": "LEXIN - COMP. - 1G",
+      "posologie": "01 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "FLAMAZOLE - CREME DERM. - 0,01",
+      "posologie": "01 ap/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "VOTREX - COMP. GASTRORESIST. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "brulure 02": [
+    {
+      "medicament": "LEXIN - COMP. - 1G",
+      "posologie": "02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "MEBO - pommade",
+      "posologie": "01 ap/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "VOTREX - COMP. GASTRORESIST. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 120MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    }
+  ],
+  "colique nephretique": [
+    {
+      "medicament": "RAPIDUS 50 - COMP.ENRO. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "ESOPROTON CP 30 mg",
+      "posologie": "01 cp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SPASFON 160 MG CP",
+      "posologie": "01 CP 03*/J",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "NIbiol -  -",
+      "posologie": "01 CP",
+      "quantite": "03*/J"
+    }
+  ],
+  "colopathie": [
+    {
+      "medicament": "Esoproton� | 30mg",
+      "posologie": "01 gle/j",
+      "quantite": "02 bo�tes"
+    },
+    {
+      "medicament": "LEVOSPASME - COMP. ORODISPERS. - 80MG",
+      "posologie": "02 cp 3*/j",
+      "quantite": "02 bo�tes"
+    }
+  ],
+  "conjonctivite1": [
+    {
+      "medicament": "SERUM PHYSIOLOGIQUE .",
+      "posologie": "1 ap 02*/j sur les 02 yeux",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "FUCITHALMIC - GEL OPHT - 0,01",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    }
+  ],
+  "conjonctivite2": [
+    {
+      "medicament": "SERUM PHYSIOLOGIQUE .",
+      "posologie": "1 ap 02*/j sur les 02 yeux",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "CRONOLONE-NEO - PDE.OPHT. - 0,35 %** / 0,1 %**",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    }
+  ],
+  "conjonctivite3": [
+    {
+      "medicament": "SERUM PHYSIOLOGIQUE .",
+      "posologie": "1 ap 02*/j sur les 02 yeux",
+      "quantite": "02 fl"
+    },
+    {
+      "medicament": "CRONOLONE-NEO - PDE.OPHT. - 0,35 %** / 0,1 %**",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    }
+  ],
+  "constipation enf": [
+    {
+      "medicament": "FORLAX 4G - PDRE. SOL. BUV. EN SACH.-DOSE - 4G/SACH.",
+      "posologie": "01 sachet 1*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "EZILAX - SIROP - 0,6666",
+      "posologie": "01 cac 02*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "covid": [
+    {
+      "medicament": "AUGMENTIN ADULTE - PDRE P. SUSP. BUV. EN SACHET-DOSE - 1G/125MG/SACHET",
+      "posologie": "01 sachet 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "ZOMAX - COMP. - 500MG",
+      "posologie": "01 cp le 01er j puis 1/2 cp /j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "PARAMOL - COMP. SEC. - 1G",
+      "posologie": "01 cp 3*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "DEXASONE - SOL. INJ. - 4MG/ML",
+      "posologie": "01 inj en im /j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 180MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "BRONCHOCALM ADULTES - SIROP - 0,2%",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "dhe+vms enf": [
+    {
+      "medicament": "INPHADIUM - SIROP - 0,2MG/ML",
+      "posologie": "01 dose 3*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SMECTA ORANGE-VANILLE - PDRE. P. SUSP. BUV. EN SACHET-DOSE - 3G/SACHET",
+      "posologie": "1 sachet 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "FLAGYL - SUSP.BUV. - 125MG/5ML",
+      "posologie": "01 cas 3*/",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "BACTRIM 240 srp -",
+      "posologie": "01 cas 03*/",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "MOTILIUM - SUSP.BUV. - 1MG/ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "dhe+vms nrs": [
+    {
+      "medicament": "COTRIMOXAZOLE - SUSP.BUV. - 200MG/40MG/5ML",
+      "posologie": "01/2 CAC 02*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "MOTIDONE - SUSP. BUV. - 1MG/ML",
+      "posologie": "01 DOSE 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "MYCOCIDE - PDE. DERM. - 1,5MUI/15MG/37,5MG/15G",
+      "posologie": "01 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "TIORFAN NOURRISSON - PDRE. ORALE - 10MG/SACH.",
+      "posologie": "01 schet 02*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "diarhee +vomissement": [
+    {
+      "medicament": "LOPERAMIDE NS - GLES - 2MG",
+      "posologie": "02 gle 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SMECTA ORANGE-VANILLE - PDRE. P. SUSP. BUV. EN SACHET-DOSE - 3G/SACHET",
+      "posologie": "1 sachet 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "FLAGYL - COMP. PELLI. - 250MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "COTRIMOXAL FORTE - COMP. SEC. - 800MG/160MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "MOTILIUM - COMP.PELLI. - 10MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "diarhee vomissement enf": [
+    {
+      "medicament": "INPHADIUM - SIROP - 0,2MG/ML",
+      "posologie": "01 DOSE 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "SMECTA ORANGE-VANILLE - PDRE. P. SUSP. BUV. EN SACHET-DOSE - 3G/SACHET",
+      "posologie": "1 sachet 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "COTRIMOXAZOLE - SUSP.BUV. - 200MG/40MG/5ML",
+      "posologie": "01 CAC 02*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "MOTIDONE - SUSP. BUV. - 1MG/ML",
+      "posologie": "01 DOSE 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 DOSE 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "MYCOCIDE - PDE. DERM. - 1,5MUI/15MG/37,5MG/15G",
+      "posologie": "01 02*/j",
+      "quantite": "01 tube"
+    }
+  ],
+  "douleur abd enf": [
+    {
+      "medicament": "TIMONAL - SIROP - 10MG/5ML",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "DEBRIDAT - PDRE. SUSP. BUV. (EN FLACON) - 0,7870G POUR 100G",
+      "posologie": "01 cas 02*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "SPASFON 80 MG CP",
+      "posologie": "01 cp en cas de dl abd",
+      "quantite": "01 boite"
+    }
+  ],
+  "epigastralgie+vms": [
+    {
+      "medicament": "ESOPROTON CP 30 mg",
+      "posologie": "01 cp /j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "MOTILIUM - COMP.PELLI. - 10MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PARALGAN - CP. - 1000MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "GAVISCON - SUSP.BUV.",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "BACTRIM 480 CP",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "epistaxis": [
+    {
+      "medicament": "DICYNONE - COMP. - 250MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "H E C pommade",
+      "posologie": "01 ap 02*/j en cas d'epistaxis dans les narines",
+      "quantite": "01 tube"
+    }
+  ],
+  "fievre de nrs+vms": [
+    {
+      "medicament": "EFFERALGAN PEDIATRIQUE - SOL. BUV. - 0,03",
+      "posologie": "01 dose  03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "PARALGAN - SUPPO. - 100MG",
+      "posologie": "01 suppo en cas de pic de fievre",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "MOTILIUM - SUSP.BUV. - 1MG/ML",
+      "posologie": "01 dose 02*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "furencle": [
+    {
+      "medicament": "ROVADAL - COMP. - 1 500 000UI",
+      "posologie": "01 CP 03*/J",
+      "quantite": "10 JOURS"
+    },
+    {
+      "medicament": "FUCIDANE - PDE. DERM - 0,02",
+      "posologie": "01 AP 03*/J",
+      "quantite": "01 TUBE"
+    },
+    {
+      "medicament": "BETADINE SOLUTION",
+      "posologie": "01 AP 03*/J",
+      "quantite": "01 FL"
+    }
+  ],
+  "gale": [
+    {
+      "medicament": "ASCABOL - SOL. APPLI. LOCALE -",
+      "posologie": "J1:appli apr�s un bain savonneux.laisser s�cher pdt 10min",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": ".",
+      "posologie": "puis 02me rebadigeonange [tt le corps (sauf le visage et C chevelu)]",
+      "quantite": ""
+    },
+    {
+      "medicament": ".",
+      "posologie": "J3: prendre une douche",
+      "quantite": ""
+    },
+    {
+      "medicament": "aphtiria poudre",
+      "posologie": "Poudrer, la literie, les v�tements.",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "TIFEN - SIROP - 1MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    }
+  ],
+  "inf uri ad 01": [
+    {
+      "medicament": "BACTRIM 480 CP",
+      "posologie": "02 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "RAPIDUS 50 - COMP.ENRO. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SOLUMEDROL 40 MG AMP",
+      "posologie": "01 inj en im",
+      "quantite": "02 bo�tes"
+    },
+    {
+      "medicament": "LEVOSPASME - COMP. ORODISPERS. - 80MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "NIbiol -",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "infection urinaire en": [
+    {
+      "medicament": "BACTRIM 240",
+      "posologie": "01 cam 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "TIMONAL - SIROP - 10MG/5ML",
+      "posologie": "01 cam 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "NIFLURIL suppo enf",
+      "posologie": "01 supp le soir",
+      "quantite": "01 boite"
+    }
+  ],
+  "leishm absence de gluc": [
+    {
+      "medicament": "CLARIDAR 500 COMP. PELLI. 500MG B/14",
+      "posologie": "01 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "flagyl comp 500 mg",
+      "posologie": "01 cp 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "EAU OXYGENEE - 10 VOLUMES",
+      "posologie": "01 ap 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "lombalgie": [
+    {
+      "medicament": "RAPIDUS 50 - COMP.ENRO. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "ESOPROTON CP 30 mg",
+      "posologie": "01 cp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "RELAXAN - COMP - 4MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "GELDENE 0,5 % GEL",
+      "posologie": "01 application 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "SOLUMEDROL 40 MG AMP",
+      "posologie": "01 inj chaque 02 j",
+      "quantite": "04 bo�tes"
+    }
+  ],
+  "migraine avec aura1": [
+    {
+      "medicament": "MIGRAZEN - COMP. PELLI. - 0,5MG DE PIZOTIFENE (0,73MG DE MALATE)",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "NAPROX - COMP. PELLI. - 550MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PANADOL EXTRA - COMP. PELLI. - 500MG/65MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "MIGREX - COMP PELLI - 50MG",
+      "posologie": "01 cp en cas de crise",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "CLOPRAMID - SOL.BUV - 0,001",
+      "posologie": "01 cas 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "MEDROL - COMP. - 16MG",
+      "posologie": "01 cp /j pd 05 jours",
+      "quantite": "01 boite"
+    }
+  ],
+  "migraine avec aura2": [
+    {
+      "medicament": "MIGRAZEN - COMP. PELLI. - 0,5MG DE PIZOTIFENE (0,73MG DE MALATE)",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "NAPROX - COMP. PELLI. - 550MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PANADOL EXTRA - COMP. PELLI. - 500MG/65MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "RELPAX - COMP. PELLI. - 20MG",
+      "posologie": "01 cp en cas de crise",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "MEDROL - COMP. - 16MG",
+      "posologie": "01 cp /j pd 05 jours",
+      "quantite": "01 boite"
+    }
+  ],
+  "mycose simple": [
+    {
+      "medicament": "SKETOSKIN - CREME DERM. - 0,02",
+      "posologie": "01 ap 02*/j",
+      "quantite": "02 tubes"
+    },
+    {
+      "medicament": "HEXOMEDINE - SOL.DERM. - 0,15%",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "HISTAGAN - SIROP - 0,5MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    }
+  ],
+  "otite ad avec otrhe 02": [
+    {
+      "medicament": "EAU OXYGENEE - SOL. USAGE EXTERNE - 10VOLUMES",
+      "posologie": "01 BAIN D'OREILLE 03*/J",
+      "quantite": "01 FL"
+    },
+    {
+      "medicament": "OTOCINE - SOL. AURI. STERILE - 2MG/ML (1MG/0,5ML)",
+      "posologie": "01 gtte 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "NIFLURIC - SUPPO. - 700MG",
+      "posologie": "01 supp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "AUGMENTIN ADULTE - PDRE P. SUSP. BUV. EN SACHET-DOSE - 1G/125MG/SACHET",
+      "posologie": "01 dose 02*/j",
+      "quantite": "10 jours"
+    }
+  ],
+  "otite ad avec otrhe": [
+    {
+      "medicament": "EAU OXYGENEE - SOL. USAGE EXTERNE - 10VOLUMES",
+      "posologie": "01 BAIN D'OREILLE 03*/J",
+      "quantite": "01 FL"
+    },
+    {
+      "medicament": "OTOCINE - SOL. AURI. STERILE - 2MG/ML (1MG/0,5ML)",
+      "posologie": "01 gtte 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "NIFLURIC - SUPPO. - 700MG",
+      "posologie": "01 supp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "AUGMENTIN ADULTE - PDRE P. SUSP. BUV. EN SACHET-DOSE - 1G/125MG/SACHET",
+      "posologie": "01 dose 02*/j",
+      "quantite": "10 jours"
+    }
+  ],
+  "otite enf": [
+    {
+      "medicament": "EAU OXYGENEE - SOL. USAGE EXTERNE - 10VOLUMES",
+      "posologie": "01 BAIN D'OREILLE 03*/J",
+      "quantite": "01 FL"
+    },
+    {
+      "medicament": "POLYDEXA - SOL AURIC. GTTES - 650.000UI/1000.000UI/0,100G/100ML",
+      "posologie": "01 gtte 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "NIFLURIC - SUPPO. - 400MG",
+      "posologie": "01 supp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "AUGMENTIN ENFANT ET AUGMENTIN NOURRISSON - PDRE. P. SUSP. BUV. - 100MG/12,5MG/ML",
+      "posologie": "01 dose 02*/j",
+      "quantite": "10 jours"
+    }
+  ],
+  "oxyrose enf": [
+    {
+      "medicament": "FLUVERMAL - SUSP.BUV. - 100MG/5ML",
+      "posologie": "01 cam/ pd 03j a renouvler apres 15 j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "HISTAGAN - SIROP - 0,5MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "TIMONAL - SIROP - 10MG/5ML",
+      "posologie": "01 cam 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "petyriasis v": [
+    {
+      "medicament": "KETODERM - GEL MOUSSANT EN SACHET- DOSE VOIE CUTANEE - 0,02",
+      "posologie": "01 ap sur le corps",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "VAVO - CREME DERM. - 0,02",
+      "posologie": "01 ap/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "TIFEN - SIROP - 1MG/5ML",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    }
+  ],
+  "pied diabetique 01": [
+    {
+      "medicament": "FUCIDINE - COMP. PELLI. - 250MG",
+      "posologie": "02 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "FLAZOL - COMP. ENRO. - 500MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "GENTAMICINE BIOCHEMIE - SOL.INJ. - 80MG/2ML",
+      "posologie": "01 inj /j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "ZETA - CREME DERM. - 0,02",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "PRAXILENE - COMP. PELLI. - 200MG",
+      "posologie": "01 cp /j",
+      "quantite": "01 boite"
+    }
+  ],
+  "pied diabetique 02": [
+    {
+      "medicament": "PYOSTACINE - COMP.PELLI.SEC. - 500MG",
+      "posologie": "02 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "FLAZOL - COMP. ENRO. - 500MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "GENTAMICINE BIOCHEMIE - SOL.INJ. - 80MG/2ML",
+      "posologie": "01 inj /j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "ZETA - CREME DERM. - 0,02",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "PRAXILENE - COMP. PELLI. - 200MG",
+      "posologie": "01 cp /j",
+      "quantite": "01 boite"
+    }
+  ],
+  "pied diabetique 03": [
+    {
+      "medicament": "FUCIDINE - COMP. PELLI. - 250MG",
+      "posologie": "02 cp 02*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "FLAZOL - COMP. ENRO. - 500MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "07 jours"
+    },
+    {
+      "medicament": "ZETA - CREME DERM. - 0,02",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "PRAXILENE - COMP. PELLI. - 200MG",
+      "posologie": "01 cp /j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "LOMAC - GLES. A MICROG. GASTRORESIST. - 20MG",
+      "posologie": "01 gl/j",
+      "quantite": "02 bo�tes"
+    }
+  ],
+  "plaie simple enf": [
+    {
+      "medicament": "LEXIN 250 - SUSP. BUV. - 250MG/5ML",
+      "posologie": "01 ap 03*/j",
+      "quantite": "10 jours"
+    },
+    {
+      "medicament": "NIFLUMENE - SUPPO. - 400MG",
+      "posologie": "01 suppo /j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "ANTALFEN - SUSP. BUV. - 20MG/ML (100MG/5ML)",
+      "posologie": "01 dose 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "EAU OXYGENEE - SOL. USAGE EXTERNE - 10VOLUMES",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "plaie simple": [
+    {
+      "medicament": "LEXIN - GLES. - 500MG",
+      "posologie": "01 ap",
+      "quantite": "03*/j"
+    },
+    {
+      "medicament": "VOTREX - COMP. GASTRORESIST. - 50MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PARAMOL - COMP. SEC. - 1G",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "EAU OXYGENEE - SOL. USAGE EXTERNE - 10VOLUMES",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "rhinite allergique": [
+    {
+      "medicament": "NASACORT - SUSP. P.PULV. NAS. EN FL. PULVERISATEUR - 55�G/DOSE",
+      "posologie": "01 pul 02*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 180MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SOLUPRED ORO - COMP. ORODISPERS. - 20MG",
+      "posologie": "02 cp /j pd 05 jours",
+      "quantite": "01 boite"
+    }
+  ],
+  "teigne": [
+    {
+      "medicament": "LAMIDAZ - CREME DERM. - 0,01",
+      "posologie": "01 ap 02*/j sur les lesions",
+      "quantite": "02 tubes"
+    },
+    {
+      "medicament": "KETOCONAZOLE NOVAGENERICS - shampooing",
+      "posologie": "01 f/semaine",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "LAMIDAZ cp 250mg",
+      "posologie": "1/2 cp/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "teigne2": [
+    {
+      "medicament": "LAMIDAZ - CREME DERM. - 0,01",
+      "posologie": "01 ap 02*/j sur (cuir chevelu)",
+      "quantite": "02 tubes"
+    },
+    {
+      "medicament": "KETOCONAZOLE NOVAGENERICS - shampooing",
+      "posologie": "01 f/semaine",
+      "quantite": "01 fl"
+    }
+  ],
+  "toux rebelle": [
+    {
+      "medicament": "ZOMAX - COMP. - 500MG",
+      "posologie": "01 cp le 01er j puis 1/2 cp /j",
+      "quantite": "05 jours"
+    },
+    {
+      "medicament": "TELFAST - COMP PELLI. - 180MG",
+      "posologie": "01 cp le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "BRONCHOCALM ADULTES - SIROP - 0,2%",
+      "posologie": "01 cas 03*/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "VITAMINE C - COMP.EFFER. - 500MG",
+      "posologie": "01 /j",
+      "quantite": "01 boite"
+    }
+  ],
+  "traumatisme simple": [
+    {
+      "medicament": "GELDENE 0,5 % GEL",
+      "posologie": "01 ap 02*/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "LOMAC - GLES. A MICROG. GASTRORESIST. - 20MG",
+      "posologie": "01 l/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "RAPIDUS 50 - COMP.ENRO. - 50MG",
+      "posologie": "01 cp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PARALGAN - COMP. SEC. - 500MG",
+      "posologie": "01 cp 03*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "varicelle": [
+    {
+      "medicament": "HISTAGAN - Sirop",
+      "posologie": "01 cac le soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "HEXOMEDINE - SOL.DERM. - 0,15%",
+      "posologie": "01 ap 03*/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "vertige": [
+    {
+      "medicament": "TANGANIL - COMP. - 500MG",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "SERC - COMP. - 8MG",
+      "posologie": "01 cp/j",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "PARAMOL - COMP. SEC. - 1G",
+      "posologie": "01 cp 02*/j",
+      "quantite": "01 boite"
+    }
+  ],
+  "brucellose aigue 01 er intention": [
+    {
+      "medicament": "Doxycycline 100 mg",
+      "posologie": "02 cp en une prise unique au milieu du repas",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Gentamicine 80mg",
+      "posologie": "une inj 02 fois par jour",
+      "quantite": "14 jours"
+    }
+  ],
+  "brucellose aigue 02 intention": [
+    {
+      "medicament": "Doxycycline 100 mg",
+      "posologie": "02 cp en une prise unique au milieu du repas",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Rifampicine 300mg ou (150)mg",
+      "posologie": "900mg en une prise � distance des repas",
+      "quantite": "42 jours"
+    }
+  ],
+  "brucellose aigue 03 intention A": [
+    {
+      "medicament": "Doxycycline 100 mg",
+      "posologie": "02 cp en une prise unique au milieu du repas",
+      "quantite": "60 jours"
+    },
+    {
+      "medicament": "Bacrim (cotrimoxazole) 480mg",
+      "posologie": "02cp 02 fois par jour",
+      "quantite": "60 jours"
+    }
+  ],
+  "brucellose aigue 03 intention B": [
+    {
+      "medicament": "Rifampicine 300mg ou (150)mg",
+      "posologie": "900mg en une prise � distance des repas",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Ciprofloxacine 500mg",
+      "posologie": "01 cp 02 fois par jour",
+      "quantite": "42 jours"
+    }
+  ],
+  "brucellose femme enceinte": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 480mg",
+      "posologie": "02cp 02 fois par jour",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Rifampicine 300mg ou (150)mg",
+      "posologie": "900mg en une prise � distance des repas",
+      "quantite": "42 jours"
+    }
+  ],
+  "brucellose enfant inf de 08 ans 01 <08kg": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 240mg sirop",
+      "posologie": "(poids * 75) / 200 ml 02 fois par jour",
+      "quantite": "60 jours"
+    },
+    {
+      "medicament": "Gentamicine 40 mg",
+      "posologie": "1/2 amp en IM  par jour",
+      "quantite": "14 jours"
+    }
+  ],
+  "brucellose  enf inf de 08 ans 01 8<poids<16": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 240mg sirop",
+      "posologie": "(poids * 75) / 200 ml 02 fois par jour",
+      "quantite": "60 jours"
+    },
+    {
+      "medicament": "Gentamicine 40 mg",
+      "posologie": "1amp en IM  par jour",
+      "quantite": "14 jours"
+    }
+  ],
+  "brucellose  enf inf de 08 ans 01 16<poids<36": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 240mg sirop",
+      "posologie": "(poids * 75) / 200 ml 02 fois par jour",
+      "quantite": "60 jours"
+    },
+    {
+      "medicament": "Gentamicine 40 mg",
+      "posologie": "une inj 02 fois par jour",
+      "quantite": "14 jours"
+    }
+  ],
+  "brucellose  enf inf de 08 ans 01 >35": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 240mg sirop",
+      "posologie": "(poids * 75) / 200 ml 02 fois par jour",
+      "quantite": "60 jours"
+    },
+    {
+      "medicament": "Gentamicine 80 mg",
+      "posologie": "une inj 02 fois par jour",
+      "quantite": "14 jours"
+    }
+  ],
+  "brucellose  enf inf de 08 ans 02 ": [
+    {
+      "medicament": "Bactrim (cotrimoxazole) 240mg sirop",
+      "posologie": "((poids * 75) / 200) ml 02 fois par jour",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Rifampicine p�diatrique",
+      "posologie": "(poids * 15) mg en une prise � distance des repas",
+      "quantite": "42 jours"
+    }
+  ],
+  "brucellose  enf plus de 08 ans 01": [
+    {
+      "medicament": "Bacrim (cotrimoxazole) 240mg sirop",
+      "posologie": "(poids * 75) / 200 ml 02 fois par jour",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Gentamicine 40 mg",
+      "posologie": "1/2 amp en IM",
+      "quantite": "42 jours"
+    }
+  ],
+  "brucellose  enf plus de 08 ans 02": [
+    {
+      "medicament": "Doxycycline 100 mg cp",
+      "posologie": "(poids * 5) mg en une prise au milieu de repas",
+      "quantite": "42 jours"
+    },
+    {
+      "medicament": "Rifampicine p�diatrique",
+      "posologie": "(poids * 25) mg en une prise � distance des repas",
+      "quantite": "42 jours"
+    }
+  ],
+  "Alopécie femme": [
+    {
+      "medicament": "MINOXIDIL NS SOL.  0,02 B/1FL",
+      "posologie": "2/j matin/soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Phytohair gel",
+      "posologie": "01 gel 02*/j",
+      "quantite": "02 mois"
+    },
+    {
+      "medicament": "◾️Shampooing :anti chutte. (klorane ou hair force au quinine ou autre..)",
+      "posologie": "01 f/ semaine",
+      "quantite": "01 fl"
+    }
+  ],
+  "test": [
+    {
+      "medicament": "DOLIPRANE - SUPPO - 100MG",
+      "posologie": "01",
+      "quantite": "01"
+    }
+  ],
+  "test 4": [
+    {
+      "medicament": "LEVOSPASME - COMP. ORODISPERS. - 80MG",
+      "posologie": "1",
+      "quantite": "1"
+    }
+  ],
+  "Alopécie homme": [
+    {
+      "medicament": "MINOXIDIL NS SOL.  0,05 B/1FL",
+      "posologie": "2/j matin/soir",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Phytohair gel",
+      "posologie": "01 gel 02*/j",
+      "quantite": "02 mois"
+    },
+    {
+      "medicament": "◾️Shampooing :anti chutte. (klorane ou hair force au quinine ou autre..)",
+      "posologie": "01 f/ semaine",
+      "quantite": "01 fl"
+    }
+  ],
+  "Cors et Durillons": [
+    {
+      "medicament": "Cornex ou Duofilm",
+      "posologie": "1app/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Vaseline salicylée 10%",
+      "posologie": "1app 2/j",
+      "quantite": "1bte"
+    }
+  ],
+  "Dermatite atopique adulte": [
+    {
+      "medicament": "Hydracort ou Betasone pmd",
+      "posologie": "1app/j le soir pdt 1 sem Puis 1app 1/2j pdt 1sem Puis 1app 1/3 pdt 1sem",
+      "quantite": "1tube"
+    },
+    {
+      "medicament": "Histagan ou Primalan ou Deslor cp",
+      "posologie": "1cp/j soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "Vaseline Ou Dexeryl",
+      "posologie": "1app 2/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "Hexomedine sol",
+      "posologie": "1app 2/j après bain",
+      "quantite": "01 fl"
+    }
+  ],
+  "Dermatite atopique enfant": [
+    {
+      "medicament": "Locapred pmd",
+      "posologie": "1app/j pdt 7j 1app/2j pdt 7j 1app/3j pdt 7j Puis arrêt",
+      "quantite": "qsp 21 jour"
+    },
+    {
+      "medicament": "Primalan ou Histagan sirop",
+      "posologie": "1càm 1/j la nuit",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Dexeryl  ou Vaseline",
+      "posologie": "1app 3/j",
+      "quantite": "01 fl"
+    }
+  ],
+  "Eczéma de contact": [
+    {
+      "medicament": "Bestasone pmd 0.05%",
+      "posologie": "1app 2/j pdt 7j puis dégression",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "Hexamedine sol",
+      "posologie": "1app 2/j  après bain",
+      "quantite": "1flc"
+    },
+    {
+      "medicament": "Clarityne cp 10mg",
+      "posologie": "1cp/j le soir",
+      "quantite": "01 boite"
+    },
+    {
+      "medicament": "Dexeryl crème",
+      "posologie": "1app 2/j",
+      "quantite": "01 tube"
+    }
+  ],
+  "Folliculite / Furoncle": [
+    {
+      "medicament": "Hexomedine sol",
+      "posologie": "1app 4/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Fucidine pmd",
+      "posologie": "1app 4/j",
+      "quantite": "01 tube"
+    },
+    {
+      "medicament": "Lexin cp 1g",
+      "posologie": "1g 3/j",
+      "quantite": "10 jours"
+    }
+  ],
+  "Herpès circiné adulte 01": [
+    {
+      "medicament": "Lamisil cp 250mg",
+      "posologie": "1cp/j pdt 15j",
+      "quantite": "15 jours"
+    },
+    {
+      "medicament": "Ketoconazole 2% ou Dermofix / Lamidaz",
+      "posologie": "1app 2/j",
+      "quantite": "20 j"
+    },
+    {
+      "medicament": "Isomedine sol",
+      "posologie": "1app 3/j pdt 7j",
+      "quantite": "01fl"
+    }
+  ],
+  "Herpès circiné adulte 02": [
+    {
+      "medicament": "Fluconazole cp 150mg",
+      "posologie": "1/sem pdt 3sem",
+      "quantite": "03 sem"
+    },
+    {
+      "medicament": "Ketoconazole 2% ou Dermofix / Lamidaz",
+      "posologie": "1app 2/j",
+      "quantite": "20 j"
+    },
+    {
+      "medicament": "Isomedine sol",
+      "posologie": "1app 3/j pdt 7j",
+      "quantite": "01 fl"
+    }
+  ],
+  "Herpès circiné enf": [
+    {
+      "medicament": "Griseofulvine  cp",
+      "posologie": "20mg/kg/j pdt 4sem",
+      "quantite": "04 sem"
+    },
+    {
+      "medicament": "Terbinafine (Lamisil)1% pmd",
+      "posologie": "1app/j",
+      "quantite": "01tube"
+    }
+  ],
+  "Herpès labial (répétition)": [
+    {
+      "medicament": "Ciclovir pmd",
+      "posologie": "1app 4_5/j",
+      "quantite": "03 tubes"
+    },
+    {
+      "medicament": "Hexomedine sol",
+      "posologie": "1app 3/j",
+      "quantite": "01fl"
+    },
+    {
+      "medicament": "Aciclovir cp 200mg",
+      "posologie": "5/j pdt 5j",
+      "quantite": "05 jours"
+    }
+  ],
+  "Intertrigo  repitition": [
+    {
+      "medicament": "Lamidaz/Dermofix/Pe varyl/Ketoskin pmd",
+      "posologie": "1app 2/j pdt 2mois",
+      "quantite": "2mois"
+    },
+    {
+      "medicament": "Pevaryl spray/Dermobacter sol/Betadine",
+      "posologie": "1app 2/j",
+      "quantite": "01 fl"
+    },
+    {
+      "medicament": "Terbinafine cp 250mg",
+      "posologie": "1cp/j pdt 2mois après bilan hépatique",
+      "quantite": "2mois"
+    }
+  ],
+  "Molluscum contagiosum": [
+    {
+      "medicament": "Molutrex ACM sol ou Poxkare sol",
+      "posologie": "1app 2/j pdt 14j",
+      "quantite": "01 fl"
+    }
+  ],
+  "Onychomycose": [
+    {
+      "medicament": "Loceryl sol/Mycoster 8% (vernis)",
+      "posologie": "1app 2/sem le matin pdt 3mois",
+      "quantite": "3mois"
+    },
+    {
+      "medicament": "Terbinafine 250mg",
+      "posologie": "1cp/j pdt 3 mois",
+      "quantite": "03 mois"
+    },
+    {
+      "medicament": "Lamisil crème",
+      "posologie": "1app 1/j le soir",
+      "quantite": "03 mois"
+    }
+  ],
+  "Onychomycose  enf": [
+    {
+      "medicament": "Terbinafine 250mg",
+      "posologie": "<20kg=> 1/4cp 20_40kg=> 1/2cp",
+      "quantite": "01 mois"
+    },
+    {
+      "medicament": "Lamisil crème",
+      "posologie": "1app 1/j le soir",
+      "quantite": "01 mois"
+    }
+  ],
+  "Pityriasis versicolor": [
+    {
+      "medicament": "Ketokonazol gel moussant",
+      "posologie": "1app/semaine pdt 1mois",
+      "quantite": "01 mois"
+    },
+    {
       "medicament": "Ketokonazol 2% pmd",
       "posologie": "1app/j le soir pdt 2_4semaines",
       "quantite": "4semaines"
