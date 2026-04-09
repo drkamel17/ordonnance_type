@@ -1,6 +1,11 @@
-export const runtime = 'edge';
+export const config = {
+  runtime: 'edge',
+  api: {
+    bodyParser: false,
+  },
+};
 
-export async function POST(request) {
+export default async function handler(request) {
   try {
     const { data, message, sha } = await request.json();
     
@@ -27,7 +32,6 @@ export async function POST(request) {
       branch: 'main'
     };
     
-    // Ajouter SHA si c'est une mise a jour
     if (sha) {
       body.sha = sha;
     }
@@ -48,7 +52,7 @@ export async function POST(request) {
       return new Response(JSON.stringify({ 
         success: true, 
         message: 'File updated on GitHub',
-        sha: result.content.sha
+        sha: result.content?.sha
       }), {
         headers: { 'Content-Type': 'application/json' }
       });
