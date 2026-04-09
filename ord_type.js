@@ -5,6 +5,7 @@ let ordonnanceEnEdition = null;
 let medicamentsTemp = [];
 let listeMedicaments = [];
 let data = {};
+let modeAutoSync = true; // Telecharge automatiquement apres modification
 
 // === Initialisation ===
 document.addEventListener('DOMContentLoaded', async () => {
@@ -446,35 +447,28 @@ function cacherMessage() {
     container.style.display = 'none';
 }
 
-// === Sauvegarde vers fichier JSON (serveur Python) ===
+// === Sauvegarde automatique (localStorage + telechargement) ===
+function showSyncIndicator(message) {
+    const indicator = document.getElementById('sync-indicator');
+    const msgElement = document.getElementById('sync-message');
+    msgElement.innerHTML = message;
+    indicator.classList.add('show');
+    setTimeout(() => indicator.classList.remove('show'), 5000);
+}
+
 async function sauvegarderVersFichier(data) {
-    const dataStr = JSON.stringify(data, null, 2);
+    // Toujours sauvegarder dans localStorage
+    localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
     
-    try {
-        const response = await fetch('http://localhost:8000/save', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: dataStr
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            afficherMessage('Ordonnance sauvegardee sur le serveur !', 'success');
-        } else {
-            throw new Error(result.error || 'Erreur serveur');
-        }
-    } catch (error) {
-        console.log('Erreur sauvegarde serveur:', error);
-        // Fallback: telechargement
-        const blob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'ordonnances-types.json';
-        link.click();
-        URL.revokeObjectURL(url);
-    }
+    // Telechargement automatique du fichier JSON
+    const dataStr = JSON.stringify(data, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'ordonnances-types.json';
+    link.click();
+    URL.revokeObjectURL(url);
+    
+    showSyncIndicator('📥 <a href="ordonnances-types.json" download>Cliquez ici</a> si le telechargement ne demarre pas automatiquement.<br>Puis remplacez le fichier sur le serveur.');
 }

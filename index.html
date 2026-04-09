@@ -401,6 +401,35 @@
       margin-bottom: 15px;
     }
 
+    .sync-indicator {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #17a2b8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      z-index: 1000;
+      display: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .sync-indicator.show {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .sync-indicator a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
     .search-box:focus {
       outline: none;
       border-color: #007bff;
@@ -486,6 +515,10 @@
   </div>
 
   <input type="file" id="input-import" accept=".json">
+
+  <div class="sync-indicator" id="sync-indicator">
+    <span id="sync-message"></span>
+  </div>
 
   <script src="ord_type.js"></script>
   <script>
