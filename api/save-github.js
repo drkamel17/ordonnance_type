@@ -1,23 +1,25 @@
-export const config = {
-  runtime: 'edge',
-  api: {
-    bodyParser: false,
-  },
-};
+export const runtime = 'edge';
 
-export default async function handler(request) {
+export async function POST(request) {
   try {
-    const { data, message, sha } = await request.json();
+    const body = await request.json();
+    const { data, message, sha } = body;
     
     const token = process.env.GITHUB_TOKEN;
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const path = 'ordonnances-types.json';
     
+    // Debug
+    console.log('Token exists:', !!token);
+    console.log('Owner:', owner);
+    console.log('Repo:', repo);
+    
     if (!token || !owner || !repo) {
       return new Response(JSON.stringify({ 
         success: false, 
-        message: 'GitHub config not set' 
+        message: 'GitHub config not set',
+        env: { token: !!token, owner, repo }
       }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
@@ -26,24 +28,26 @@ export default async function handler(request) {
     
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
     
-    const body = {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+    
+    const githubBody = {
       message: message || 'Update ordonnances-types.json',
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2)))),
+      content: content,
       branch: 'main'
     };
     
     if (sha) {
-      body.sha = sha;
+      githubBody.sha = sha;
     }
     
     const response = await fetch(url, {
       method: 'PUT',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `token ${token}`,
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github.v3+json'
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(githubBody)
     });
     
     const result = await response.json();
@@ -59,7 +63,8 @@ export default async function handler(request) {
     } else {
       return new Response(JSON.stringify({ 
         success: false, 
-        message: result.message || 'GitHub API error'
+        message: result.message || 'GitHub API error',
+        details: result
       }), {
         status: response.status,
         headers: { 'Content-Type': 'application/json' }
