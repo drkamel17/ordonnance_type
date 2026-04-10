@@ -1,14 +1,11 @@
 {
   "env": {
-    "JSONBIN_API_KEY": "$2a$10$Ptyh0oty3KR8LV.uHssl7.3W0h9v5YzY/oxjQrTDuzN2rQ1TIOtg2",
-    "JSONBIN_BIN_ID": "69d7eb68856a68218917382a",
-    "GITHUB_TOKEN": "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",
-    "GITHUB_OWNER": "drkamel17",
-    "GITHUB_REPO": "ordonnance_type"
+    "SUPABASE_URL": "https://nlvrgabznsmzodnylyly.supabase.co",
+    "SUPABASE_KEY": "sb_secret_Tb8bBtKCx2bS7L2me8boZA_pHZintts"
   },
   "rewrites": [
     { "source": "/api/config.js", "destination": "/api/config.js" },
-    { "source": "/api/save-github", "destination": "/api/save-github.js" },
+    { "source": "/api/save-supabase", "destination": "/api/save-supabase.js" },
     { "source": "/ordonnances-types.json", "destination": "/ordonnances-types.json" }
   ],
   "headers": [

@@ -1,18 +1,9 @@
 // Gestion des ordonnances types - ord_type.js
 
-// === Configuration ===
-let jsonBinConfig = {
-    binId: '69d7eb68856a68218917382a',
-    apiKey: ''
-};
-
-// Configuration GitHub (optionnel - pour ecrire directement sur GitHub)
-let GITHUB_CONFIG = {
-    token: '',
-    owner: '',  
-    repo: '',   
-    path: 'ordonnances-types.json',
-    branch: 'main'
+// === Configuration Supabase ===
+let supabaseConfig = {
+    url: '',
+    key: ''
 };
 
 // Charger la config depuis le serveur
@@ -25,19 +16,11 @@ async function loadConfig() {
             const env = JSON.parse(match[1]);
             console.log('Config chargee:', env);
             
-            jsonBinConfig = {
-                binId: env.JSONBIN_BIN_ID || jsonBinConfig.binId,
-                apiKey: env.JSONBIN_API_KEY || ''
+            supabaseConfig = {
+                url: env.SUPABASE_URL || '',
+                key: env.SUPABASE_KEY || ''
             };
-            // Charger aussi la config GitHub
-            if (env.GITHUB_TOKEN && env.GITHUB_OWNER && env.GITHUB_REPO) {
-                GITHUB_CONFIG.token = env.GITHUB_TOKEN;
-                GITHUB_CONFIG.owner = env.GITHUB_OWNER;
-                GITHUB_CONFIG.repo = env.GITHUB_REPO;
-                console.log('GitHub config:', GITHUB_CONFIG);
-            } else {
-                console.log('GitHub config NON configuree');
-            }
+            console.log('Supabase config:', supabaseConfig);
         }
     } catch (err) {
         console.log('Config non chargee:', err);
@@ -45,8 +28,8 @@ async function loadConfig() {
 }
 
 // Fonction pour obtenir la config
-function getJSONBinConfig() {
-    return jsonBinConfig;
+function getSupabaseConfig() {
+    return supabaseConfig;
 }
 
 // Variables globales
@@ -124,15 +107,15 @@ function initialiserEvenements() {
 
 // === Chargement des données ===
 async function chargerOrdonnancesTypesDepuisFichier() {
-    // Essayer d'abord JSONBin.io (source principale)
+    // Essayer d'abord Supabase (source principale)
     try {
-        const jsonBinData = await chargerDepuisJSONBin();
-        if (jsonBinData && Object.keys(jsonBinData).length > 0) {
-            console.log('✅ Charge depuis JSONBin.io:', Object.keys(jsonBinData).length, 'ordonnances');
-            return jsonBinData;
+        const supabaseData = await chargerDepuisSupabase();
+        if (supabaseData && Object.keys(supabaseData).length > 0) {
+            console.log('✅ Charge depuis Supabase:', Object.keys(supabaseData).length, 'ordonnances');
+            return supabaseData;
         }
     } catch (e) {
-        console.log('JSONBin.io non accessible');
+        console.log('Supabase non accessible:', e);
     }
     
     // Fallback: fichier local
@@ -152,30 +135,50 @@ async function chargerOrdonnancesTypesDepuisFichier() {
     return {};
 }
 
-// === Chargement depuis JSONBin.io (pour le bouton actualiser) ===
-async function chargerDepuisJSONBin() {
-    const config = getJSONBinConfig();
+// === Chargement depuis Supabase ===
+async function chargerDepuisSupabase() {
+    const config = getSupabaseConfig();
+    console.log('=== Chargement Supabase ===');
+    console.log('Config:', config);
     
-    if (!config.apiKey) {
-        console.log('API Key non configuree');
+    if (!config.url || !config.key) {
+        console.log('Supabase config non configuree');
         return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
     }
     
     try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${config.binId}/latest`, {
+        console.log('Appel API /api/save-supabase...');
+        const response = await fetch('/api/save-supabase', {
+            method: 'GET',
             headers: {
-                'X-Master-Key': config.apiKey
+                'Content-Type': 'application/json'
             }
         });
+        
+        console.log('Response status:', response.status);
         
         if (!response.ok) {
             throw new Error('Erreur HTTP: ' + response.status);
         }
         
         const result = await response.json();
-        return result.record || {};
+        console.log('Result:', result);
+        
+        if (result.success && result.data) {
+            console.log('=== Succes: ', Object.keys(result.data).length, 'ordonnances chargees');
+            return result.data;
+        }
+        return {};
     } catch (error) {
-        console.error('Erreur chargement JSONBin.io:', error);
+        console.error('Erreur chargement Supabase:', error);
+        return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
+    }
+        if (result.success && result.data) {
+            return result.data;
+        }
+        return {};
+    } catch (error) {
+        console.error('Erreur chargement Supabase:', error);
         return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
     }
 }
@@ -568,70 +571,48 @@ function showSyncIndicator(message) {
 }
 
 async function sauvegarderVersFichier(data) {
-    const config = getJSONBinConfig();
+    const config = getSupabaseConfig();
+    console.log('=== Sauvegarde Supabase ===');
+    console.log('Config:', config);
+    console.log('Data:', Object.keys(data).length, 'ordonnances');
     
     // Sauvegarder dans localStorage (pour compatibilité)
     localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
     
-    // Sauvegarder sur JSONBin.io
-    if (config.apiKey) {
+    // Sauvegarder sur Supabase
+    if (config.url && config.key) {
         try {
-            await fetch(`https://api.jsonbin.io/v3/b/${config.binId}`, {
-                method: 'PUT',
-                headers: {
-                    'X-Master-Key': config.apiKey,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-        } catch (e) {
-            console.log('JSONBin.io save failed:', e);
-        }
-    }
-    
-    // Sauvegarder sur GitHub (si configure)
-    if (GITHUB_CONFIG.token && GITHUB_CONFIG.owner && GITHUB_CONFIG.repo) {
-        console.log('Sauvegarde GitHub:', GITHUB_CONFIG);
-        try {
-            const response = await fetch('/api/save-github', {
+            console.log('Appel POST /api/save-supabase...');
+            const response = await fetch('/api/save-supabase', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    data: data,
-                    message: 'Update ordonnances-types.json via app'
-                })
+                body: JSON.stringify({ data: data })
             });
             
+            console.log('Response status:', response.status);
+            
             const result = await response.json();
-            console.log('GitHub response:', result);
+            console.log('Result:', result);
             
             if (result.success) {
-                showSyncIndicator('✅ Sauvegarde sur GitHub reussie !');
-                afficherMessage('Fichier mis a jour sur GitHub !', 'success');
-                return;
+                showSyncIndicator('✅ Sauvegarde Supabase reussie !');
+                afficherMessage('Ordonnance sauvegardee sur le cloud !', 'success');
             } else {
-                console.log('GitHub save failed:', result.message);
+                throw new Error(result.message || 'Erreur Supabase');
             }
         } catch (e) {
-            console.log('GitHub save error:', e);
+            console.log('Supabase save failed:', e);
+            showSyncIndicator('❌ Erreur sauvegarde cloud.');
         }
-    } else {
-        console.log('GitHub non configure - token:', GITHUB_CONFIG.token ? 'OK' : 'MANQUE');
-    }
-    
-    // Fallback: telechargement
-    if (config.apiKey) {
-        showSyncIndicator('✅ Sauvegarde JSONBin.io reussie !');
-        afficherMessage('Ordonnance sauvegardee sur le cloud !', 'success');
     } else {
         showSyncIndicator('💾 Sauvegarde locale effectuee.');
     }
 }
 
-// === Actualiser depuis JSONBin.io ===
+// === Actualiser depuis Supabase ===
 async function actualiserDepuisJSONBin() {
     try {
-        const nouvelleData = await chargerDepuisJSONBin();
+        const nouvelleData = await chargerDepuisSupabase();
         
         if (Object.keys(nouvelleData).length > 0) {
             data = nouvelleData;
@@ -639,10 +620,10 @@ async function actualiserDepuisJSONBin() {
             afficherOrdonnances(data);
             mettreAJourStats();
             
-            showSyncIndicator('✅ Donnees actualisees depuis JSONBin.io !');
+            showSyncIndicator('✅ Donnees actualisees depuis Supabase !');
             afficherMessage('Donnees actualisees depuis le cloud !', 'success');
         } else {
-            showSyncIndicator('⚠️Aucune donnee sur JSONBin.io.');
+            showSyncIndicator('⚠️Aucune donnee sur Supabase.');
         }
     } catch (error) {
         console.error('Erreur actualisation:', error);
