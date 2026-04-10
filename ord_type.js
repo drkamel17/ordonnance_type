@@ -173,14 +173,6 @@ async function chargerDepuisSupabase() {
         console.error('Erreur chargement Supabase:', error);
         return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
     }
-        if (result.success && result.data) {
-            return result.data;
-        }
-        return {};
-    } catch (error) {
-        console.error('Erreur chargement Supabase:', error);
-        return JSON.parse(localStorage.getItem('ordonnancesTypes') || '{}');
-    }
 }
 
 async function chargerOrdonnancesTypes() {
