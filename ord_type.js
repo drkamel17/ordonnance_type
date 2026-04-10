@@ -91,7 +91,6 @@ function creerDatalistMedicaments() {
 // === Gestion des événements ===
 function initialiserEvenements() {
     // Boutons principaux
-    document.getElementById('btn-nouvelle-ordonnance').addEventListener('click', nouvelleOrdonnance);
     document.getElementById('btn-enregistrer').addEventListener('click', enregistrerOrdonnance);
     document.getElementById('btn-annuler').addEventListener('click', annulerEdition);
     document.getElementById('btn-ajouter-medicament').addEventListener('click', ajouterMedicamentForm);
