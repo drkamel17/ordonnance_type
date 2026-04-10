@@ -619,14 +619,6 @@ async function sauvegarderVersFichier(data) {
         showSyncIndicator('💾 Sauvegarde locale effectuee.');
     }
 }
-        } catch (e) {
-            console.log('Supabase save failed:', e);
-            showSyncIndicator('❌ Erreur sauvegarde cloud.');
-        }
-    } else {
-        showSyncIndicator('💾 Sauvegarde locale effectuee.');
-    }
-}
 
 // === Actualiser depuis Supabase ===
 async function actualiserDepuisJSONBin() {
