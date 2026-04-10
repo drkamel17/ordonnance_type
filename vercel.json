@@ -1,5 +1,6 @@
 {
   "env": {
+    "WRITE_PASSWORD": "DAOUDI",
     "SUPABASE_URL": "https://nlvrgabznsmzodnylyly.supabase.co",
     "SUPABASE_KEY": "sb_secret_Tb8bBtKCx2bS7L2me8boZA_pHZintts"
   },

@@ -4,8 +4,25 @@ export async function POST(request) {
   console.log('SUPABASE_KEY:', process.env.SUPABASE_KEY ? 'Present' : 'MANQUANT');
   
   try {
-    const { data } = await request.json();
+    const { data, password } = await request.json();
     console.log('Data received:', Object.keys(data).length, 'ordonnances');
+    console.log('Password received:', password ? 'Yes' : 'No');
+    
+    // Verifier le mot de passe
+    const writePassword = process.env.WRITE_PASSWORD;
+    console.log('Expected password:', writePassword ? 'Set' : 'Not set');
+    
+    if (!password || password !== writePassword) {
+      console.log('Mot de passe incorrect ou manquant');
+      return new Response(JSON.stringify({ 
+        success: false, 
+        message: 'Mot de passe incorrect',
+        requiresPassword: true
+      }), {
+        status: 401,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
     
     const supabaseUrl = process.env.SUPABASE_URL;
     const supabaseKey = process.env.SUPABASE_KEY;

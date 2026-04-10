@@ -6,6 +6,9 @@ let supabaseConfig = {
     key: ''
 };
 
+// Variable de session pour le mot de passe d'ecriture
+let sessionPassword = null;
+
 // Charger la config depuis le serveur
 async function loadConfig() {
     try {
@@ -568,8 +571,18 @@ async function sauvegarderVersFichier(data) {
     console.log('Config:', config);
     console.log('Data:', Object.keys(data).length, 'ordonnances');
     
-    // Sauvegarder dans localStorage (pour compatibilité)
+    // Sauvegarder dans localStorage (pour compatibilite)
     localStorage.setItem('ordonnancesTypes', JSON.stringify(data));
+    
+    // Demander le mot de passe si pas encore defini
+    if (!sessionPassword) {
+        sessionPassword = prompt('Entrez le mot de passe pour sauvegarder dans le cloud:');
+        if (!sessionPassword) {
+            showSyncIndicator('💾 Sauvegarde locale uniquement (mot de passe non fourni).');
+            afficherMessage('Sauvegarde locale effectuee. Vous pouvez l\'utiliser sans modifier ou sauvegarder dans le cloud.', 'warning');
+            return;
+        }
+    }
     
     // Sauvegarder sur Supabase
     if (config.url && config.key) {
@@ -578,7 +591,7 @@ async function sauvegarderVersFichier(data) {
             const response = await fetch('/api/save-supabase', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ data: data })
+                body: JSON.stringify({ data: data, password: sessionPassword })
             });
             
             console.log('Response status:', response.status);
@@ -589,9 +602,23 @@ async function sauvegarderVersFichier(data) {
             if (result.success) {
                 showSyncIndicator('✅ Sauvegarde Supabase reussie !');
                 afficherMessage('Ordonnance sauvegardee sur le cloud !', 'success');
+            } else if (result.requiresPassword) {
+                // Mot de passe incorrect
+                alert('Mot de passe incorrect.\n\nVous pouvez l\'utiliser sans modifier ou sauvegarder dans le cloud.');
+                sessionPassword = null; // Reset pour reessayer
+                showSyncIndicator('❌ Mot de passe incorrect. Sauvegarde locale uniquement.');
+                afficherMessage('Mot de passe incorrect. Sauvegarde locale uniquement.', 'error');
             } else {
                 throw new Error(result.message || 'Erreur Supabase');
             }
+        } catch (e) {
+            console.log('Supabase save failed:', e);
+            showSyncIndicator('❌ Erreur sauvegarde cloud.');
+        }
+    } else {
+        showSyncIndicator('💾 Sauvegarde locale effectuee.');
+    }
+}
         } catch (e) {
             console.log('Supabase save failed:', e);
             showSyncIndicator('❌ Erreur sauvegarde cloud.');
